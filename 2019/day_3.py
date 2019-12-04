@@ -3,6 +3,7 @@ with open('input.txt') as f:
     a = lines[0].split(',')
     b = lines[1].split(',')
 
+
 def get_coords(commands):
     x = y = 0
     line = {}
@@ -45,5 +46,8 @@ for val in union:
     elif cur_min > combined_dis:
         cur_min = combined_dis
 
+minimized = min([ac[val]+bc[val] for val in union])
+print(minimized)
+
 print(cur_min)
-    
+
